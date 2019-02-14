@@ -2,7 +2,7 @@
 
 # Doses Controller
 class DosesController < ApplicationController
-  before_action :set_dose, only: %i[delete]
+  before_action :set_dose, only: %i[destroy]
   before_action :set_cocktail, only: %i[new create]
 
   def new
@@ -20,8 +20,10 @@ class DosesController < ApplicationController
     end
   end
 
-  def delete
-    raise
+  def destroy
+    @dose.destroy
+
+    redirect_to @dose.cocktail
   end
 
   private
