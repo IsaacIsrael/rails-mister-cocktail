@@ -1,0 +1,38 @@
+section{
+  height: calc(100vh - #{$navbar-size} ) ;
+  margin-top: $navbar-size;
+}
+section.no-margin{
+  margin-top:0;
+}
+
+section .header{
+  align-items: center;
+  display: flex;
+  margin: $margin 0 ;
+}
+section .header .header-body{
+  flex-grow:1;
+}
+section .header h1{
+  margin: 0;
+}
+section .header-body p {
+  font-size: medium;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+// Links
+
+.default{
+  color: $gray;
+}
+
+.primary{
+  color: $blue;
+}
+
+.danger{
+  color: $red;
+}
