@@ -1,0 +1,16 @@
+.list{
+  list-style-type: none;
+  padding: 0;
+}
+.list li{
+  border-bottom: $border;
+  display: flex;
+  justify-content: space-between;
+  padding:$padding;
+}
+.list li:last-child{
+  border-bottom: none;
+}
+.list-body{
+  flex-grow: 1;
+}

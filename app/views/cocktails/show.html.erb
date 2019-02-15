@@ -1,10 +1,29 @@
-<h1><%= @cocktail.name %></h1>
-
-<ul>
-  <% @cocktail.doses.each do |dose|  %>
-    <li>
-      <%= dose.description %> | <%= dose.ingredient.name %>
-      <%= link_to 'Delete' , dose_path(dose), method: 'DELETE' %>
-    </li>
-  <% end %>
-</ul>
+<section>
+  <div class="container">
+    <header class="header">
+      <div class="actions">
+        <%= link_to raw('<i class="fas fa-chevron-left"></i>'), root_path, class: "default" %>
+      </div>
+      <div class="header-body">
+        <h1 class="text-center"><%= @cocktail.name %></h1>
+      </div>
+    </header>
+    <div class="card infos">
+      <div class="photo">
+        <img src="https://source.unsplash.com/800x450/?coktail" alt="">
+      </div>
+      <div class="info">
+        <h3 class="text-center">Ingredients</h3>
+      <ul class="list">
+        <% @cocktail.doses.each do |dose|  %>
+          <li>
+            <span><%= "#{dose.description} #{dose.ingredient.name}"%></span>
+            <%= link_to raw('<i class="fas fa-trash"></i>') , dose_path(dose), method: 'DELETE', class:"danger" %>
+          </li>
+        <% end %>
+      </ul>
+      <%= render 'doses/form' %>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,5 +1,10 @@
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.input :description %>
-  <%= f.input :ingredient_id, collection: @ingredients %>
-  <%= f.submit %>
+<%= simple_form_for [@cocktail, @dose], :html=> { class: 'form-inline' } do |f| %>
+  <%= f.input :description, placeholder: '12 ml', label: false%>
+  <%= f.input :ingredient_id,prompt: "Ingredient", label: false, collection: @ingredients %>
+  <%= button_tag type: 'submit',class: "btn btn-default primary" do %>
+     <i class="fas fa-plus-circle"></i>
+  <% end %>
 <% end %>
+
+
+

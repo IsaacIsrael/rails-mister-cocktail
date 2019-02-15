@@ -1,0 +1,47 @@
+.infos{
+  color:inherit;
+  display: flex;
+  height: 70vh;
+  padding: $padding;
+}
+
+.photo{
+  flex-basis:60%
+}
+.infos img{
+  border-radius: $border-radius;
+  flex-basis: 60%;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.info{
+  display: flex;
+  flex-direction: column;
+  flex-grow:1;
+  height: 100%;
+  padding: $padding;
+}
+
+ .list{
+  overflow: scroll;
+}
+
+.info form button{
+  background: transparent;
+  border: none;
+  font-size: x-large;
+  height: fit-content;
+  padding:0;
+  padding-left: 2px;
+}
+
+.info input[name="dose[description]"]{
+  width: fit-content;
+}
+
+.info .help-block{
+  font-size: x-small;
+}
+
+
