@@ -1,0 +1,15 @@
+.form {
+  background-color: $background;
+  border-radius: $border-radius;
+  border: $border;
+  box-shadow: $border-shadow;
+  padding: $padding;
+}
+
+.form .actions{
+  padding-top: ($padding/2);
+}
+
+.form-inline{
+  display: flex;
+}
