@@ -1,12 +1,20 @@
 // Define variables for your color scheme
 
 // For example:
-$red: #EE5F5B;
+$black: #000;
 $blue: #469AE0;
-$yellow: #FDB631;
-$orange: #E67E22;
-$green: #32B796;
 $gray: #000000;
+$green: #32B796;
 $light-gray: #F4F4F4;
-$deep-sea-space: linear-gradient(to right, rgb(44, 62, 80), rgb(76, 161, 175));
-$background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%)
+$orange: #E67E22;
+$red: #EE5F5B;
+$white: #fff;
+$yellow: #FDB631;
+
+
+$background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%);
+$background: #fff;
+$border: #dddddd;
+$box-shadow: #dddddd;
+$brand-color: #FD955E;
+
