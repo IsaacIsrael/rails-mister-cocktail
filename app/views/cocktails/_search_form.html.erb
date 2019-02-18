@@ -1,0 +1,4 @@
+<%= simple_form_for :index, url: cocktails_path( anchor: "list") ,method:'GET', :html=> { class: 'form-inline' } do |f| %>
+  <%= f.input :name_filter, label:false, input_html: { id: "name_filter", name: 'name_filter' }  %>
+  <%= f.submit 'Search' %>
+<% end %>

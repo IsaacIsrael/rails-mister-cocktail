@@ -5,11 +5,13 @@ class Review < ApplicationRecord
   belongs_to :cocktail
 
   validates :content, presence: true
-  validates :rating, inclusion: { in: [*(0..5)] },
+  validates :rating, inclusion: { in: [*(1..5)] },
                      numericality: { only_integer: true }
 
   def self.rating_range
-    [*(0..5)].map { |nunmber| [nunmber] }
+    [*(1..5)]
+      .reverse
+      .map { |nunmber| [nunmber] }
   end
 
   def date

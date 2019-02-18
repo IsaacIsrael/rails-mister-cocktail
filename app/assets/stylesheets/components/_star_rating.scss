@@ -1,0 +1,44 @@
+$color-cheked: $yellow;
+$color-uncheked: $gray;
+
+.stars {
+  font-family: "Font Awesome 5 Free";
+  unicode-bidi: bidi-override;
+  direction: rtl;
+
+  label {
+    cursor: pointer;
+
+    &:before {
+      content: "\f005";
+      font-weight: 400;
+      color: $color-uncheked;
+    }
+  }
+  input{
+    display: none;
+
+    &:checked ~ label:before,
+    & + label:hover ~ label:before,
+    & + label:hover:before
+    {
+      color: $color-cheked;
+      font-weight: 900;
+    }
+  }
+  &:hover > input + label:before {
+    color: $color-uncheked;
+  }
+  &:hover > input + label:hover ~ label:before,
+  &:hover > input + label:hover:before {
+    color: $color-cheked;
+  }
+}
+
+.start.fas{
+  color: $color-cheked;
+}
+
+.start.far{
+  color: $color-uncheked;
+}

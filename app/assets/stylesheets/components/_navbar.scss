@@ -13,9 +13,15 @@
   background-color: $blue;
   box-shadow: border-shadow-full-width;
 
+  .navbar-wagon-link:hover {
+     background-color: $brand-color;
+     color: $white;
+  }
 }
-.navbar-wagon-brand img {
-  height: $logo-small-size;
+.navbar-wagon-brand {
+  img {
+    height: $logo-small-size;
+  }
 }
 .navbar-wagon-right {
   align-items: center;
@@ -30,16 +36,14 @@
 /* Navbar link */
 .navbar-wagon-link {
   border-radius: $border-radius;
-  border: 1px solid $brand-color;
+  border: $hero-border;
   color: $white;
   padding: ($padding/2);
   transition: all 0.3s ease;
+
+  &:hover {
+    color: $brand-color;
+    text-decoration: none;
+  }
 }
-.navbar-wagon-link:hover {
-  color: $brand-color;
-  text-decoration: none;
-}
-.navbar-wagon-color .navbar-wagon-link:hover {
-   background-color: $brand-color;
-   color: $white;
-}
+

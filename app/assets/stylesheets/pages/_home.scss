@@ -1,9 +1,45 @@
+#index{
+  section:first-child{
+    height: 100vh;
 
-.cards{
-  margin-top: $cards-space;
-  padding: $cards-space 0;
+    .form-group,
+    .form-control{
+      width: 100%
+    }
+
+    .form-control{
+      background: transparent;
+      border: none;
+      border-bottom: $hero-border ;
+      box-shadow: none;
+      color: $white;
+    }
+
+    input[type='submit']{
+      background-color: transparent;
+      border:  $hero-border;
+    }
+
+  }
+
+  section:nth-child(2){
+    padding-top: $navbar-size;
+    margin: 0;
+  }
+
+
+  #list{
+
+  }
+
+  .cards{
+    margin-top: $cards-space;
+    padding: $cards-space 0;
+  }
+
+  .card{
+    margin-bottom: $cards-space;
+  }
 }
 
-.card{
-  margin-bottom: $cards-space;
-}
+

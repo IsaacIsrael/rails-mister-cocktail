@@ -1,24 +1,28 @@
-<section class="no-margin" >
-  <%= render 'shared/hero' do %>
-      <h1>Cockatiel Society</h1>
-      <p>Where you can find yourself</p>
-  <% end %>
-
-  <div class="container">
-    <header class="text-center">
-      <h1>Ours Cockatiel</h1>
-    </header>
-    <div class="cards">
-      <div class="row">
-        <% @cocktails.each do |cocktail| %>
-          <div class="col-xs-4">
-            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('https://source.unsplash.com/800x450/?coktail');">
-              <h2 class="card-header"><%= cocktail.name %></h2>
-              <%= link_to  '', cocktail, class: "card-link" %>
+<main id="index">
+  <section class="no-margin" >
+    <%= render 'shared/hero' do %>
+        <h1> Cocktail Society</h1>
+        <%= render 'search_form' %>
+    <% end %>
+  </section>
+  <section id="list">
+    <div class="container">
+      <header class="text-center">
+        <h1>Our Cocktails</h1>
+      </header>
+      <div class="cards">
+        <div class="row">
+          <% @cocktails.each do |cocktail| %>
+            <div class="col-xs-4">
+              <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('https://source.unsplash.com/800x450/?coktail');"
+                 data-aos="zoom-in">
+                <h2 class="card-header"><%= cocktail.name %></h2>
+                <%= link_to  '', cocktail, class: "card-link" %>
+              </div>
             </div>
-          </div>
-        <% end %>
+          <% end %>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</main>

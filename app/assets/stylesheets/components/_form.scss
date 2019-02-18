@@ -4,10 +4,10 @@
   border: $border;
   box-shadow: $border-shadow;
   padding: $padding;
-}
 
-.form .actions{
-  padding-top: ($padding/2);
+  .actions{
+    padding-top: ($padding/2);
+  }
 }
 
 .form-inline{

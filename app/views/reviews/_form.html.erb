@@ -1,0 +1,11 @@
+<%= simple_form_for [@cocktail, @review] , :html=> { class: 'form' } do |f| %>
+  <div class="stars">
+    <%= f.collection_radio_buttons :rating,  Review.rating_range, :first, :first, item_wrapper_tag: false, boolean_style: :inline do |b| %>
+    <%= b.radio_button + b.label {''} %>
+    <% end %>
+  </div>
+  <%= f.input :content,  label: false%>
+  <div class="actions text-right">
+    <%= f.submit "Post", class: "btn btn-primary" %>
+  </div>
+<% end %>

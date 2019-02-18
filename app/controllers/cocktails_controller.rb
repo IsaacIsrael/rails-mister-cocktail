@@ -6,11 +6,12 @@ class CocktailsController < ApplicationController
   before_action :set_ingredients, only: %i[show]
 
   def index
-    @cocktails = Cocktail.all
+    @cocktails = Cocktail.filter(params.slice(:name_filter))
   end
 
   def show
     @dose = Dose.new
+    @review = Review.new
   end
 
   def new
